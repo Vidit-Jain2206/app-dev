@@ -1,0 +1,107 @@
+#fille name bbar.kv
+BoxLayout:
+    orientation: 'vertical'
+
+    MDToolbar:
+        id: toolbar
+        icon:'account-circle'
+        pos_hint: {"top": 1}
+        elevation: 10
+
+        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
+
+    MDNavigationLayout:
+        size_hint:(1,0.2)
+
+        ScreenManager:
+            id: screen_manager
+
+            Screen:
+                name: "scr 1"
+
+                MDLabel:
+                    text: "Screen 1"
+                    halign: "center"
+
+            Screen:
+                name: "scr 2"
+
+                MDLabel:
+                    text: "Screen 2"
+                    halign: "center"
+
+
+
+        MDNavigationDrawer:
+            id: nav_drawer
+
+
+    MDBottomNavigation:
+        #color stuff
+        #panel_color: 0,0,1,1
+
+        MDBottomNavigationItem:
+            name: 'screen 1'
+            text: "hospital near you"
+            icon: 'hospital'
+
+            MDLabel:
+                text: "list of hospitals"
+                halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'screen 2'
+            text: "check ups and info"
+            icon: 'check-circle'
+
+            MDRaisedButton:
+		        text: "Open Date Picker"
+		        pos_hint: {'center_x': .5, 'center_y': 0.9}
+		        on_release: app.show_date_picker()
+
+
+
+
+            MDLabel:
+                text: "Events Scheduled "
+                font_size:20
+                halign:'center'
+                pos_hint:{'center_x':0.5,'y':0.2}
+           
+
+            MDLabel:
+                text: "Events Done"
+                font_size:20
+                halign: 'center'
+                pos_hint:{'center_x':0.5,'y':-0.05}
+
+
+
+
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            text: "emergency!!"
+            icon: 'alert-octagon'
+
+            MDLabel:
+                text: "notification sent to contacts"
+                halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'screen 4'
+            text: "baby log"
+            icon: 'book'
+
+            MDLabel:
+                text: "baby log"
+                halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'screen 5'
+            text: "talk and blog"
+            icon: 'disqus'
+
+            MDLabel:
+                text: "chatroom"
+                halign: 'center'
+
