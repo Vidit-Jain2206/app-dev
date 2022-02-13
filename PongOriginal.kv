@@ -1,0 +1,63 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    MDToolbar:
+        title: "Bottom Navbar"
+        md_bg_color: .2,.2,.2,1
+        specific_text_color: 1,1,1,1
+
+    MDBottomNavigation:
+        #color stuff
+        #panel_color: 0,0,1,1
+
+        MDBottomNavigationItem:
+            name: 'screen 1'
+            text: "hospital near you"
+            icon: 'hospital'
+
+            MDLabel:
+                text: "list of hospitals"
+                halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'screen 2'
+            text: "check ups and info"
+            icon: 'hospital'
+
+            MDLabel:
+                text: "List Of Events"
+                halign: 'center'
+                pos_hint:{'center_x':0.5,'y':-0.1}
+
+            MDLabel:
+                text: "Events Done"
+                halign: 'center'
+                pos_hint:{'center_x':0.5,'y':-0.25}
+
+
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            text: "emergency!!"
+            icon: 'alert-octagon'
+
+            MDLabel:
+                text: "notification sent to contacts"
+                halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'screen 4'
+            text: "baby log"
+            icon: 'book'
+
+            MDLabel:
+                text: "baby log"
+                halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'screen 5'
+            text: "talk and blog"
+            icon: 'disqus'
+
+            MDLabel:
+                text: "chatroom"
+                halign: 'center'
